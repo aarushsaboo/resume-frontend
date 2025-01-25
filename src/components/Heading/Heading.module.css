@@ -1,4 +1,11 @@
 .heading{
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.part1{
     position: relative;
     
     font-size: 14px;
@@ -16,7 +23,18 @@
     /* padding-right: 0.2em; for svg */
 }
 
-.heading p{
+.part1 p{
     min-width: 20px;
 }
 /* leave room for outline */
+
+
+.rightIcon{
+    padding-left: .2em;
+}
+.rightIcon svg{
+    width: 16px; height: 16px; left: 100%;
+    cursor: pointer;
+    display: block;
+    vertical-align: middle;
+}
