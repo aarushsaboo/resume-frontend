@@ -17,10 +17,13 @@ const ResumeWorkspace = () => {
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
           />
-          <Organization
-            leftIconStyles={styles.leftIcon}
-            rightIconStyles={styles.rightIcon}
-          />
+          <div className={styles.container}>
+            <Organization
+              leftIconStyles={styles.leftIcon}
+              rightIconStyles={styles.rightIcon}
+            />
+            
+          </div>
         </div>
       </div>
     </div>

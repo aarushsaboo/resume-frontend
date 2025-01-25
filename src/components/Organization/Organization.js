@@ -2,8 +2,7 @@ import styles from './Organization.module.css';
 
 const Organization = ({leftIconStyles, rightIconStyles}) => {
   return (
-    <div className={styles.organization}>
-      <div className={styles.container}>
+      <div className={styles.organization}>
         <div className={styles.part1}>
           <div className={styles.textContent}>
             <div className={leftIconStyles}></div>
@@ -35,7 +34,6 @@ const Organization = ({leftIconStyles, rightIconStyles}) => {
           <div className={rightIconStyles}></div>
         </div>
       </div>
-    </div>
   )
 };
 
