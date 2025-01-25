@@ -1,0 +1,23 @@
+.heading{
+    position: relative;
+    
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 20.5px;
+    /* border */
+    
+    padding-bottom: 1.7094px;
+    border-bottom: 1.7094px solid rgb(0, 0, 0); 
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heading p{
+    
+}
+
+
+/* leave room for outline */

@@ -1,0 +1,41 @@
+
+/* personal details */
+.personal{
+    cursor: pointer;
+    min-width: 20px;
+}
+
+.name{
+    font-size: 24px;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+.name p{
+    
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 4px 0;
+}
+
+.otherPersonalDetails{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    white-space: break-spaces;
+}
+
+.otherPersonalDetails p{
+    
+    font-size: 14px;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 20.5px;
+}
+
+/* outline styles */
+.name:focus-within,
+.otherPersonalDetails:focus-within {
+    outline: 2px solid #007bff; /* Optional: adds a blue focus outline */
+    outline-offset: 2px;
+}
