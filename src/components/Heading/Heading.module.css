@@ -21,4 +21,11 @@
 }
 
 
+.leftIcon{
+    padding-right: .2em;
+}
+
+.rightIcon{
+    padding-left: .2rem;
+}
 /* leave room for outline */

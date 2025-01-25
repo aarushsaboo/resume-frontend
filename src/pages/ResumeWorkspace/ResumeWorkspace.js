@@ -1,6 +1,7 @@
 import styles from './ResumeWorkspace.module.css';
 import Personal from './components/Personal/Personal';
 import Heading from '../../components/Heading/Heading';
+import Organization from '../../components/Organization/Organization';
 
 const ResumeWorkspace = () => {
   return (
@@ -9,7 +10,8 @@ const ResumeWorkspace = () => {
       <div className={styles.resumeContent}>
         <Personal />
         <div className={styles.education}>
-          <Heading />
+                  <Heading />
+                  <Organization />
         </div>
       </div>
     </div>
