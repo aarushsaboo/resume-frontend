@@ -2,6 +2,7 @@ import styles from './ResumeWorkspace.module.css';
 import Personal from './components/Personal/Personal';
 import Heading from '../../components/Heading/Heading';
 import Organization from '../../components/Organization/Organization';
+import Degree from '../../components/Degree/Degree';
 
 const ResumeWorkspace = () => {
   return (
@@ -22,7 +23,7 @@ const ResumeWorkspace = () => {
               leftIconStyles={styles.leftIcon}
               rightIconStyles={styles.rightIcon}
             />
-            
+            <Degree leftIconStyles={styles.leftIcon} rightIconStyles={styles.rightIcon} />
           </div>
         </div>
       </div>

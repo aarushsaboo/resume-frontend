@@ -1,0 +1,54 @@
+.degree{
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    display: flex;
+}
+
+.part1{
+    font-style: italic;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.text{
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: unset;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 20.5px;
+    text-align: left;
+    border-color: transparent;
+    border-bottom-width: 1px;
+    min-width: 20px;
+}
+
+.text p{
+    margin-left: 0;
+    height: max-content;
+    color: rgb(156 163 175);
+}
+
+/* .text outline */
+
+
+/* part 2 */
+.part2{
+    align-items: center;
+    display: flex;
+    position: relative;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+}
+
+.graduationDate{
+    
+    font-size: 14px;
+    text-transform: unset;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 20.5px;
+    font-weight: 400;
+    font-style: italic;
+    border-bottom: 1px solid transparent;
+}
