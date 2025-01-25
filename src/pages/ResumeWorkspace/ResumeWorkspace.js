@@ -36,6 +36,7 @@ const ResumeWorkspace = () => {
             rightIconStyles={styles.rightIcon}
           />
           <div className={styles.container}>
+            {/* first company */}
             <Organization
               leftIconStyles={styles.leftIcon}
               rightIconStyles={styles.rightIcon}
@@ -45,6 +46,61 @@ const ResumeWorkspace = () => {
               rightIconStyles={styles.rightIcon}
             />
             <BulletContainer />
+            {/* second company */}
+            <Organization
+              leftIconStyles={styles.leftIcon}
+              rightIconStyles={styles.rightIcon}
+              hasTopMargin={true}
+            />
+            <Degree
+              leftIconStyles={styles.leftIcon}
+              rightIconStyles={styles.rightIcon}
+            />
+            <BulletContainer />
+          </div>
+        </div>
+        <div className={styles.leadershipExperience}>
+          <Heading
+            leftIconStyles={styles.leftIcon}
+            rightIconStyles={styles.rightIcon}
+          />
+          {/* first company */}
+          <Organization
+            leftIconStyles={styles.leftIcon}
+            rightIconStyles={styles.rightIcon}
+          />
+          <Degree
+            leftIconStyles={styles.leftIcon}
+            rightIconStyles={styles.rightIcon}
+          />
+          <BulletContainer />
+          {/* second company */}
+          <Organization
+            leftIconStyles={styles.leftIcon}
+            rightIconStyles={styles.rightIcon}
+            hasTopMargin={true}
+          />
+          <Degree
+            leftIconStyles={styles.leftIcon}
+            rightIconStyles={styles.rightIcon}
+          />
+          <BulletContainer />
+        </div>
+        <div className={styles.customSection}>
+          <Heading
+            leftIconStyles={styles.leftIcon}
+            rightIconStyles={styles.rightIcon}
+          />
+          <div className={styles.container2}>
+            <div className={styles.leftIcon}></div>
+            <div className={styles.untitled1}>
+              <p>Untitled</p>
+              <div className={styles.rightIcon}></div>
+            </div>
+            <div className={styles.colon}>:&nbsp;</div>
+            <div className={styles.untitled2}>
+              <p>Untitled</p>
+            </div>
           </div>
         </div>
       </div>
