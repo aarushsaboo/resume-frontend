@@ -13,10 +13,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    /* padding-right: 0.2em; for svg */
 }
 
 .heading p{
-    
+    min-width: 20px;
 }
 
 
