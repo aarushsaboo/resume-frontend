@@ -8,10 +8,19 @@ const ResumeWorkspace = () => {
     <div className={styles.resumeWorkspace}>
       {/* before element.. new page provisions? */}
       <div className={styles.resumeContent}>
-        <Personal />
+        <Personal
+          leftIconStyles={styles.leftIcon}
+          rightIconStyles={styles.rightIcon}
+        />
         <div className={styles.education}>
-                  <Heading />
-                  <Organization />
+          <Heading
+            leftIconStyles={styles.leftIcon}
+            rightIconStyles={styles.rightIcon}
+          />
+          <Organization
+            leftIconStyles={styles.leftIcon}
+            rightIconStyles={styles.rightIcon}
+          />
         </div>
       </div>
     </div>

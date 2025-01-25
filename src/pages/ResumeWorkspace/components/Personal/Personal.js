@@ -1,21 +1,21 @@
 import styles from "./Personal.module.css"
 
-const Personal = () => {
+const Personal = ({leftIconStyles, rightIconStyles}) => {
   return (
     <div className={styles.personal}>
       <div className={styles.name}>
-        <div className={styles.leftIcon}></div>
+        <div className={leftIconStyles}></div>
         <p>
           <strong>Aarush Saboo</strong>
         </p>
 
-        <div className={styles.rightIcon}></div>
+        <div className={rightIconStyles}></div>
       </div>
       <div className={styles.container}>
         <div className={styles.otherPersonalDetails}>
-          <div className={styles.leftIcon}></div>
+          <div className={leftIconStyles}></div>
           <p>India | Phone # | aarush.saboo@gmail.com | LinkedIn Link</p>
-          <div className={styles.rightIcon}></div>
+          <div className={rightIconStyles}></div>
         </div>
       </div>
     </div>

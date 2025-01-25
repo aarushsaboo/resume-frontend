@@ -21,3 +21,12 @@
     margin-bottom: 16px;
     width: 100%;
 }
+
+
+.leftIcon{
+    padding-right: .2em;
+}
+
+.rightIcon{
+    padding-left: .2rem;
+}

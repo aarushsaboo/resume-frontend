@@ -1,16 +1,16 @@
 import styles from './Organization.module.css';
 
-const Organization = () => {
+const Organization = ({leftIconStyles, rightIconStyles}) => {
   return (
     <div className={styles.organization}>
       <div className={styles.container}>
         <div className={styles.part1}>
           <div className={styles.textContent}>
-            <div className={styles.leftIcon}></div>
+            <div className={leftIconStyles}></div>
             <div className={styles.text}>
               <p>University</p>
             </div>
-            <div className={styles.rightIcon}></div>
+            <div className={rightIconStyles}></div>
           </div>
 
           <svg
@@ -28,11 +28,11 @@ const Organization = () => {
           </svg>
         </div>
         <div className={styles.part2}>
-          <div className={styles.leftIcon}></div>
+          <div className={leftIconStyles}></div>
           <div className={styles.cityState}>
             <p>City, State</p>
           </div>
-          <div className={styles.rightIcon}></div>
+          <div className={rightIconStyles}></div>
         </div>
       </div>
     </div>

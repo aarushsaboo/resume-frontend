@@ -19,13 +19,4 @@
 .heading p{
     min-width: 20px;
 }
-
-
-.leftIcon{
-    padding-right: .2em;
-}
-
-.rightIcon{
-    padding-left: .2rem;
-}
 /* leave room for outline */

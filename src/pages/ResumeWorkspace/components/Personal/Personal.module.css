@@ -32,15 +32,6 @@
     align-items: center;
 }
 
-
-.leftIcon{
-    padding-right: .2em;
-}
-
-.rightIcon{
-    padding-left: .2rem;
-}
-
 .otherPersonalDetails{
     word-wrap: break-word;
     white-space: pre-wrap;
