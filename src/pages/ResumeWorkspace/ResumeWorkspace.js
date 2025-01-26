@@ -1,15 +1,53 @@
-import styles from './ResumeWorkspace.module.css';
-import Personal from './components/Personal/Personal';
-import Heading from '../../components/Heading/Heading';
-import Organization from '../../components/Organization/Organization';
-import Degree from '../../components/Degree/Degree';
-import BulletContainer from '../../components/BulletContainer/BulletContainer';
+import React, { useRef } from "react"
+import html2pdf from "html2pdf.js"
+
+
+import styles from "./ResumeWorkspace.module.css"
+
+import Personal from "./components/Personal/Personal"
+import Heading from "../../components/Heading/Heading"
+import Organization from "../../components/Organization/Organization"
+import Degree from "../../components/Degree/Degree"
+import BulletContainer from "../../components/BulletContainer/BulletContainer"
 
 const ResumeWorkspace = () => {
+  const resumeRef = useRef(null)
+
+  const exportToPDF = () => {
+    const element = resumeRef.current
+
+    const opt = {
+      margin: [10, 10, 10, 10],
+      filename: "resume.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: {
+        scale: 2,
+        logging: false,
+        useCORS: true,
+      },
+      jsPDF: {
+        unit: "mm",
+        format: "letter",
+        orientation: "portrait",
+      },
+    }
+
+    html2pdf().set(opt).from(element).save()
+  }
+
   return (
     <div className={styles.resumeWorkspace}>
-      {/* before element.. new page provisions? */}
-      <div className={styles.resumeContent}>
+      {/* PDF Export Button */}
+      <button onClick={exportToPDF} className={styles.exportButton}>
+        Export to PDF
+      </button>
+
+      {/* Resume Content */}
+      <div
+        ref={resumeRef}
+        id="resumePdfContent"
+        className={styles.resumeContent}
+      >
         <Personal
           leftIconStyles={styles.leftIcon}
           rightIconStyles={styles.rightIcon}
@@ -106,6 +144,6 @@ const ResumeWorkspace = () => {
       </div>
     </div>
   )
-};
+}
 
-export default ResumeWorkspace;
+export default ResumeWorkspace
