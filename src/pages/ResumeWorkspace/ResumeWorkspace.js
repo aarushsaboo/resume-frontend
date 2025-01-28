@@ -54,15 +54,18 @@ const ResumeWorkspace = () => {
         />
         <div className={styles.education}>
           <Heading
+            heading={"EDUCATION"}
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
           />
           <div className={styles.container}>
             <Organization
+              organization={"University"}
               leftIconStyles={styles.leftIcon}
               rightIconStyles={styles.rightIcon}
             />
             <Degree
+              degree={"Degree"}
               leftIconStyles={styles.leftIcon}
               rightIconStyles={styles.rightIcon}
             />
@@ -70,27 +73,32 @@ const ResumeWorkspace = () => {
         </div>
         <div className={styles.projectExperience}>
           <Heading
+            heading={"PROJECT EXPERIENCE"}
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
           />
           <div className={styles.container}>
             {/* first company */}
             <Organization
+              organization={"Organization"}
               leftIconStyles={styles.leftIcon}
               rightIconStyles={styles.rightIcon}
             />
             <Degree
+              degree={"Title"}
               leftIconStyles={styles.leftIcon}
               rightIconStyles={styles.rightIcon}
             />
             <BulletContainer />
             {/* second company */}
             <Organization
+              organization={"Organization"}
               leftIconStyles={styles.leftIcon}
               rightIconStyles={styles.rightIcon}
               hasTopMargin={true}
             />
             <Degree
+              degree={"Title"}
               leftIconStyles={styles.leftIcon}
               rightIconStyles={styles.rightIcon}
             />
@@ -99,33 +107,41 @@ const ResumeWorkspace = () => {
         </div>
         <div className={styles.leadershipExperience}>
           <Heading
+            heading={"WORK EXPERIENCE"}
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
           />
           {/* first company */}
           <Organization
+            organization={"Company"}
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
           />
           <Degree
+            degree={"Job Title"}
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
           />
           <BulletContainer />
           {/* second company */}
           <Organization
+            organization={"Company"}
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
             hasTopMargin={true}
           />
           <Degree
+            degree={"Job Title"}
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
           />
-          <BulletContainer />
+          <BulletContainer
+            bullet={["My first point", "My second point", "My third point"]}
+          />
         </div>
         <div className={styles.customSection}>
           <Heading
+            heading={"CUSTOM SECTION"}
             leftIconStyles={styles.leftIcon}
             rightIconStyles={styles.rightIcon}
           />

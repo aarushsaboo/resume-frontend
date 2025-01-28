@@ -1,6 +1,6 @@
 import styles from './Organization.module.css';
 
-const Organization = ({leftIconStyles, rightIconStyles, hasTopMargin = false}) => {
+const Organization = ({organization, leftIconStyles, rightIconStyles, hasTopMargin = false}) => {
   return (
     <div
       className={styles.organization}
@@ -10,7 +10,7 @@ const Organization = ({leftIconStyles, rightIconStyles, hasTopMargin = false}) =
         <div className={styles.textContent}>
           <div className={leftIconStyles}></div>
           <div className={styles.text}>
-            <p>University</p>
+            <p>{organization}</p>
           </div>
           <div className={rightIconStyles}></div>
         </div>

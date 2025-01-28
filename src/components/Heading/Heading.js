@@ -1,12 +1,12 @@
 import styles from './Heading.module.css';
 
-const Heading = ({leftIconStyles, rightIconStyles}) => {
+const Heading = ({heading, leftIconStyles, rightIconStyles}) => {
   return (
     <div className={styles.heading}>
       <div className={styles.part1}>
         <div className={leftIconStyles}></div>
         <p>
-          <strong>EDUCATION</strong>
+          <strong>{heading}</strong>
         </p>
         <div className={styles.rightIcon}>
           <svg

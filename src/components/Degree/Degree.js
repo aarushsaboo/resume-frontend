@@ -1,12 +1,12 @@
 import styles from './Degree.module.css';
 
-const Degree = ({leftIconStyles, rightIconStyles}) => {
+const Degree = ({degree, leftIconStyles, rightIconStyles}) => {
   return (
     <div className={styles.degree}>
       <div className={styles.part1}>
         <div className={leftIconStyles}></div>
         <div className={styles.text}>
-          <p>Degree</p>
+          <p>{degree}</p>
         </div>
         <div className={rightIconStyles}></div>
       </div>

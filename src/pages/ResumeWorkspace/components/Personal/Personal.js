@@ -6,7 +6,7 @@ const Personal = ({leftIconStyles, rightIconStyles}) => {
       <div className={styles.name}>
         <div className={leftIconStyles}></div>
         <p>
-          <strong>Aarush Saboo</strong>
+          <strong>Heramb pp</strong>
         </p>
 
         <div className={rightIconStyles}></div>
@@ -14,7 +14,7 @@ const Personal = ({leftIconStyles, rightIconStyles}) => {
       <div className={styles.container}>
         <div className={styles.otherPersonalDetails}>
           <div className={leftIconStyles}></div>
-          <p>India | Phone # | aarush.saboo@gmail.com | LinkedIn Link</p>
+          <p>India | Phone # | heramb.ap@somaiya.edu | LinkedIn Link</p>
           <div className={rightIconStyles}></div>
         </div>
       </div>
