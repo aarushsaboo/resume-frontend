@@ -1,5 +1,4 @@
-// Organization.js
-import { useDynamicWidth } from '../../hooks/useDynamicWidth'
+import { useDynamicWidth } from "../../hooks/useDynamicWidth"
 import styles from "./Organization.module.css"
 
 const Organization = ({
@@ -72,7 +71,7 @@ const Organization = ({
               placeholder="City, State"
               value={location}
               onChange={handleLocationInput}
-              className={styles.input}
+              className={`${styles.input} ${styles.rightAligned}`}
               style={{ width: locationWidth }}
             />
             <span

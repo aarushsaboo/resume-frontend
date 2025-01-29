@@ -1,22 +1,27 @@
 
 /* Updated CSS */
 .organization {
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
 }
 
 .part1 {
-    justify-content: flex-start;
-    flex-direction: row;
     display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.textContent {
+.part2 {
+    /* display: flex;
     align-items: center;
+    margin-left: auto; */
+}
+
+.textContent, .cityState {
     display: flex;
-    position: relative;
+    align-items: center;
 }
 
 .text {
@@ -26,6 +31,7 @@
     line-height: 20.5px;
     text-align: left;
     position: relative;
+    display: flex;
 }
 
 .inputWrapper {
@@ -34,6 +40,7 @@
     background: transparent;
     border-radius: 2px;
     transition: background-color 0.15s ease;
+    white-space: nowrap;
 }
 
 .inputWrapper:hover {
@@ -52,6 +59,10 @@
     cursor: text;
 }
 
+.input.rightAligned {
+    text-align: right;
+}
+
 .input::placeholder {
     color: rgb(156 163 175);
 }
@@ -59,19 +70,12 @@
 .input:focus {
     background-color: rgba(0, 0, 0, 0.05);
     box-shadow: 0 0 0 1px rgba(156, 163, 175, 0.2);
-    border-radius: 1px;
 }
 
 .addIcon {
     cursor: pointer;
     margin-left: 4px;
-    margin-top: 2px;
-}
-
-.part2 {
-    align-items: center;
-    position: relative;
-    display: flex;
+    margin-top: 1px;
 }
 
 .cityState {
@@ -79,7 +83,7 @@
     text-transform: unset;
     font-family: "Times New Roman", Times, serif;
     line-height: 21.5px;
-    text-align: left;
+    text-align: right;
 }
 
 .hiddenText {
