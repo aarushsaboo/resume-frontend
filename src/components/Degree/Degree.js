@@ -1,5 +1,6 @@
 import { useDynamicWidth } from "../../hooks/useDynamicWidth"
 import { useDatePicker } from "../../hooks/useDatePicker"
+import { useClickOutside } from "./hooks/useClickOutside"
 import DatePicker from "react-datepicker"
 import { useEffect, useRef } from "react"
 import "react-datepicker/dist/react-datepicker.css"
@@ -27,20 +28,7 @@ const Degree = ({ degree, leftIconStyles, rightIconStyles }) => {
   } = useDatePicker()
 
   const datePickerRef = useRef(null)
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        datePickerRef.current &&
-        !datePickerRef.current.contains(event.target)
-      ) {
-        closePickers()
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, [closePickers])
+  useClickOutside(datePickerRef, closePickers)
 
   const getDateDisplay = () => {
     const start = startDate ? formatDate(startDate) : "Start Date"
