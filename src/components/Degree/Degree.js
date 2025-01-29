@@ -1,6 +1,7 @@
 import { useDynamicWidth } from "../../hooks/useDynamicWidth"
 import { useDatePicker } from "../../hooks/useDatePicker"
 import DatePicker from "react-datepicker"
+import { useEffect, useRef } from "react"
 import "react-datepicker/dist/react-datepicker.css"
 import styles from "./Degree.module.css"
 
@@ -22,7 +23,32 @@ const Degree = ({ degree, leftIconStyles, rightIconStyles }) => {
     toggleStartPicker,
     toggleEndPicker,
     formatDate,
+    closePickers,
   } = useDatePicker()
+
+  const datePickerRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        datePickerRef.current &&
+        !datePickerRef.current.contains(event.target)
+      ) {
+        closePickers()
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [closePickers])
+
+  const getDateDisplay = () => {
+    const start = startDate ? formatDate(startDate) : "Start Date"
+    const end = endDate ? formatDate(endDate) : "Finish Date"
+    return { start, end }
+  }
+
+  const dates = getDateDisplay()
 
   return (
     <div className={styles.degree}>
@@ -48,11 +74,11 @@ const Degree = ({ degree, leftIconStyles, rightIconStyles }) => {
         <div className={rightIconStyles}></div>
       </div>
       <div className={styles.part2}>
-        <div className={styles.graduationDate}>
+        <div className={styles.graduationDate} ref={datePickerRef}>
           <div className={styles.datePickerWrapper}>
-            <div className={styles.dateText} onClick={toggleStartPicker}>
-              Start Date{startDate ? `: ${formatDate(startDate)}` : ""}
-            </div>
+            <span className={styles.dateText} onClick={toggleStartPicker}>
+              {dates.start}
+            </span>
             {isStartPickerOpen && (
               <div className={styles.pickerContainer}>
                 <DatePicker
@@ -70,9 +96,9 @@ const Degree = ({ degree, leftIconStyles, rightIconStyles }) => {
           </div>
           <span className={styles.dateSeparator}>:</span>
           <div className={styles.datePickerWrapper}>
-            <div className={styles.dateText} onClick={toggleEndPicker}>
-              Finish Date{endDate ? `: ${formatDate(endDate)}` : ""}
-            </div>
+            <span className={styles.dateText} onClick={toggleEndPicker}>
+              {dates.end}
+            </span>
             {isEndPickerOpen && (
               <div className={styles.pickerContainer}>
                 <DatePicker

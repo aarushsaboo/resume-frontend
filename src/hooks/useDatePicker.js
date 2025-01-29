@@ -1,5 +1,4 @@
-// hooks/useDatePicker.js
-import { useState } from "react"
+import { useState, useCallback } from "react"
 
 export const useDatePicker = () => {
   const [startDate, setStartDate] = useState(null)
@@ -25,6 +24,11 @@ export const useDatePicker = () => {
     setIsStartPickerOpen(false)
   }
 
+  const closePickers = useCallback(() => {
+    setIsStartPickerOpen(false)
+    setIsEndPickerOpen(false)
+  }, [])
+
   return {
     startDate,
     endDate,
@@ -35,5 +39,6 @@ export const useDatePicker = () => {
     toggleStartPicker,
     toggleEndPicker,
     formatDate,
+    closePickers,
   }
 }
