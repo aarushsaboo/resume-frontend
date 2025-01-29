@@ -11,7 +11,7 @@ const Degree = ({degree, leftIconStyles, rightIconStyles}) => {
         <div className={rightIconStyles}></div>
       </div>
       <div className={styles.part2}>
-        <div className={styles.graduationDate}>Graduation Date: Date</div>
+        <div className={styles.graduationDate}>Start Date: Finish Date</div>
       </div>
     </div>
   )
