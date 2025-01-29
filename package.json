@@ -9,6 +9,7 @@
     "html2pdf.js": "^0.10.2",
     "jspdf": "^2.5.2",
     "react": "^19.0.0",
+    "react-datepicker": "^7.6.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.2",
     "react-rnd": "^10.4.14",
