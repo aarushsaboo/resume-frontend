@@ -1,3 +1,5 @@
+
+/* Updated CSS */
 .organization {
   justify-content: space-between;
   align-items: center;
@@ -5,79 +7,87 @@
   display: flex;
 }
 
-.part1{
+.part1 {
     justify-content: flex-start;
     flex-direction: row;
     display: flex;
 }
 
-.part1 svg{
-    width: 16px; height: 16px; left: 100%;
-    cursor: pointer;
-    margin-top: 0.125rem;
-    margin-left: 0.25rem;
-    display: block;
-    vertical-align: middle;
-}
-
-/* text */
-.textContent{
+.textContent {
     align-items: center;
     display: flex;
     position: relative;
 }
 
-.text{
-    cursor: pointer;
-    
+.text {
     font-size: 14px;
     text-transform: unset;
     font-family: "Times New Roman", Times, serif;
     line-height: 20.5px;
     text-align: left;
-    
-    border-bottom-width: 1px;
-    border-color: transparent;
-    min-width: 20px;
+    position: relative;
 }
 
-/* outline for .text */
+.inputWrapper {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 2px;
+    transition: background-color 0.15s ease;
+}
 
-.text p{
-    
-    margin-left: 0px !important;
-    height: max-content;
+.inputWrapper:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.input {
+    border: none;
+    outline: none;
     margin: 0;
-        color: rgb(156 163 175);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    color: black;
+    cursor: text;
 }
 
-/* part2 */
-.part2{
+.input::placeholder {
+    color: rgb(156 163 175);
+}
+
+.input:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 1px rgba(156, 163, 175, 0.2);
+    border-radius: 1px;
+}
+
+.addIcon {
+    cursor: pointer;
+    margin-left: 4px;
+    margin-top: 2px;
+}
+
+.part2 {
     align-items: center;
     position: relative;
     display: flex;
-
 }
 
-.cityState{
-    
+.cityState {
     font-size: 14px;
     text-transform: unset;
     font-family: "Times New Roman", Times, serif;
     line-height: 21.5px;
-    
     text-align: left;
-    
-    border-color: transparent;
-    
-    border-bottom-width: 1px;
-    
-    min-width: 20px;
 }
 
-.cityState p{
-    height: max-content;
-    margin-left: 0px;
-    cursor: pointer;
-    color: rgb(156 163 175);
+.hiddenText {
+    visibility: hidden;
+    position: absolute;
+    white-space: pre;
+    font-family: inherit;
+    font-size: inherit;
+    top: 0;
+    left: 0;
 }
