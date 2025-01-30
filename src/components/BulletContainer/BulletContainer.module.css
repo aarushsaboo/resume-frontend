@@ -45,6 +45,11 @@
     border-radius: 2px;
     cursor: text;
     transition: background-color 0.15s ease;
+    display: block;
+    overflow: hidden;
+    resize: none;
+    padding: 0;
+    height: auto;
 }
 
 .bulletInput::placeholder {
