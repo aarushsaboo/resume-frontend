@@ -1,58 +1,69 @@
-/* custom section */
-.customSection{
-    align-self: flex-start;
-    width: 100%;
-}
-.container2{
-    align-items: center;
-    display: flex;
-    position: relative;
-    margin-top: 3.5px;
+.customSection {
+  align-self: flex-start;
+  width: 100%;
 }
 
-.untitled1{
-    cursor: pointer;
-    font-size: 14px;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 700;
-    height: fit-content;
-    text-align: left;
-    border-color: transparent;
-    border-bottom-width: 1px;
-    min-width: 20px;
+.container2 {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 3.5px;
+  width: 100%;
 }
 
-.untitled1 p{
-    margin-left: 0;
-    height: max-content;
-    color: rgb(156 163 175);
+.fieldGroup {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.colon{
-    font-size: 14px; font-family: "Times New Roman", Times, serif; font-weight: 700;
-    margin-left: 4px;
+.untitled1 {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
 }
 
-.untitled2{
-    
-    cursor: pointer;
-    align-items: flex-start;
-    width: 100%;
-    display: flex
-;
-    position: relative;
-    font-size: 14px;
-    font-family: "Times New Roman", Times, serif;
-    text-align: left;
-
-    border-color: transparent;
-    border-bottom-width: 1px;
-    min-width: 20px;
+.input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  min-width: 100px;
+  outline: none;
 }
 
-.untitled2 p{
-    
-    margin-left: 0;
-    height: max-content;
-color: rgb(156 163 175);
+.colon {
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  margin: 0 4px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  padding-top: 1px;
+}
+
+.untitled2 {
+  position: relative;
+  flex: 1;
+  min-width: 50px;
+}
+
+.textarea {
+  border: none;
+  background: transparent;
+  resize: none;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgb(156 163 175);
 }
