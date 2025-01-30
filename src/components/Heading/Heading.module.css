@@ -78,6 +78,10 @@
     color: rgb(156 163 175);
 }
 
+.headingInput:hover{
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
 .headingInput:focus {
     background-color: rgba(0, 0, 0, 0.05);
     box-shadow: 0 0 0 1px rgba(156, 163, 175, 0.2);
