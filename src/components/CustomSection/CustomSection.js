@@ -2,7 +2,12 @@ import { useState, useRef, useEffect } from "react"
 import styles from "./CustomSection.module.css"
 import Heading from "../Heading/Heading"
 
-const EntryRow = ({ onKeyDown, leftIconStyles, rightIconStyles }) => {
+const EntryRow = ({
+  onKeyDown,
+  leftIconStyles,
+  rightIconStyles,
+  autoFocus,
+}) => {
   const [keyText, setKeyText] = useState("")
   const [valueText, setValueText] = useState("")
   const keyInputRef = useRef(null)
@@ -20,7 +25,6 @@ const EntryRow = ({ onKeyDown, leftIconStyles, rightIconStyles }) => {
 
   const adjustInputWidth = (element) => {
     if (!element) return
-    // Create temporary span to measure text width
     const span = document.createElement("span")
     span.style.fontSize = "14px"
     span.style.fontFamily = "Times New Roman"
@@ -32,20 +36,27 @@ const EntryRow = ({ onKeyDown, leftIconStyles, rightIconStyles }) => {
     document.body.appendChild(span)
     const width = span.getBoundingClientRect().width
     document.body.removeChild(span)
-    // Add some padding to prevent text from touching the edges
-    element.style.width = `${Math.max(100, width + 10)}px`
+    // Remove the +10 padding, just use the exact text width
+    element.style.width = `${Math.max(50, width)}px`
   }
 
   const adjustTextareaHeight = (element) => {
     if (!element) return
-    element.style.height = "auto"
-    element.style.height = `${element.scrollHeight}px`
+    element.style.height = "19px" // Reset to single line
+    const scrollHeight = element.scrollHeight
+    element.style.height = scrollHeight + "px"
   }
 
   useEffect(() => {
     adjustInputWidth(keyInputRef.current)
     adjustTextareaHeight(valueTextareaRef.current)
   }, [keyText, valueText])
+
+  useEffect(() => {
+    if (autoFocus && keyInputRef.current) {
+      keyInputRef.current.focus()
+    }
+  }, [autoFocus])
 
   return (
     <div className={styles.container2}>
@@ -99,12 +110,13 @@ const CustomSection = ({ leftIconStyles, rightIconStyles }) => {
         leftIconStyles={leftIconStyles}
         rightIconStyles={rightIconStyles}
       />
-      {entries.map((entry) => (
+      {entries.map((entry, index) => (
         <EntryRow
           key={entry.id}
           onKeyDown={handleKeyDown}
           leftIconStyles={leftIconStyles}
           rightIconStyles={rightIconStyles}
+          autoFocus={index === entries.length - 1} // Auto-focus the last entry
         />
       ))}
     </div>
