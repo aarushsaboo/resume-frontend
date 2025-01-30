@@ -9,6 +9,7 @@ import Heading from "../../components/Heading/Heading"
 import Organization from "../../components/Organization/Organization"
 import Degree from "../../components/Degree/Degree"
 import BulletContainer from "../../components/BulletContainer/BulletContainer"
+import CustomSection from "../../components/CustomSection/CustomSection"
 
 const ResumeWorkspace = () => {
   const resumeRef = useRef(null)
@@ -139,24 +140,10 @@ const ResumeWorkspace = () => {
             bullet={["My first point", "My second point", "My third point"]}
           />
         </div>
-        <div className={styles.customSection}>
-          <Heading
-            heading={"CUSTOM SECTION"}
-            leftIconStyles={styles.leftIcon}
-            rightIconStyles={styles.rightIcon}
-          />
-          <div className={styles.container2}>
-            <div className={styles.leftIcon}></div>
-            <div className={styles.untitled1}>
-              <p>Untitled</p>
-              <div className={styles.rightIcon}></div>
-            </div>
-            <div className={styles.colon}>:&nbsp;</div>
-            <div className={styles.untitled2}>
-              <p>Untitled</p>
-            </div>
-          </div>
-        </div>
+        <CustomSection
+          leftIconStyles={styles.leftIcon}
+          rightIconStyles={styles.rightIcon}
+        />
       </div>
     </div>
   )

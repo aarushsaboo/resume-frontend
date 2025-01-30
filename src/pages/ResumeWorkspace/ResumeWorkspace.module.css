@@ -37,60 +37,7 @@
   position: relative;
 }
 
-/* custom section */
-.container2{
-    align-items: center;
-    display: flex;
-    position: relative;
-    margin-top: 3.5px;
-}
 
-.untitled1{
-    cursor: pointer;
-    font-size: 14px;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 700;
-    height: fit-content;
-    text-align: left;
-    border-color: transparent;
-    border-bottom-width: 1px;
-    min-width: 20px;
-}
-
-.untitled1 p{
-    margin-left: 0;
-    height: max-content;
-    color: rgb(156 163 175);
-}
-
-.colon{
-    font-size: 14px; font-family: "Times New Roman", Times, serif; font-weight: 700;
-    margin-left: 4px;
-}
-
-.untitled2{
-    
-    cursor: pointer;
-    align-items: flex-start;
-    width: 100%;
-    display: flex
-;
-    position: relative;
-    font-size: 14px;
-    font-family: "Times New Roman", Times, serif;
-    text-align: left;
-
-    border-color: transparent;
-    border-bottom-width: 1px;
-    min-width: 20px;
-}
-
-.untitled2 p{
-    
-    margin-left: 0;
-    height: max-content;
-color: rgb(156 163 175);
-}
 
 .exportButton {
   position: absolute;
