@@ -42,7 +42,7 @@ const EntryRow = ({
 
   const adjustTextareaHeight = (element) => {
     if (!element) return
-    element.style.height = "19px" // Reset to single line
+    element.style.height = "16px" // Reset to single line
     const scrollHeight = element.scrollHeight
     element.style.height = scrollHeight + "px"
   }

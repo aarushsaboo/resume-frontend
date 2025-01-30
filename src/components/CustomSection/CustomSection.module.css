@@ -47,7 +47,7 @@
   margin: 0 4px;
   flex-shrink: 0;
   align-self: flex-start;
-  padding-top: 1px;
+  margin-top: -1px;
 }
 
 .untitled2 {
@@ -66,11 +66,11 @@
   margin: 0;
   width: 100%;
   outline: none;
-  height: 19px; /* Exact single line height */
+  height: 16px; /* Exact single line height */
   line-height: normal;
   display: block;
   overflow: hidden;/* Set to match single line height */
-  min-height: 19px;
+  min-height: 16px;
 }
 
 .input::placeholder,

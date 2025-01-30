@@ -32,7 +32,6 @@ const BulletContainer = () => {
               rows={1}
               style={{
                 width: "100%",
-                maxWidth: "calc(100% - 24px)",
                 resize: "none",
                 overflow: "hidden",
                 height: "auto",
