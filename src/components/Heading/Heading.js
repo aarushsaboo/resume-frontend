@@ -30,7 +30,7 @@ const Heading = ({ heading, leftIconStyles, rightIconStyles }) => {
           {headingText}
           {/* Make sure we're showing the text here for width calculation */}
         </span>
-        <div className={styles.rightIcon}>
+        {/* <div className={styles.rightIcon}>
           <svg
             data-v-5e2699e2-s=""
             width="16"
@@ -45,7 +45,7 @@ const Heading = ({ heading, leftIconStyles, rightIconStyles }) => {
               fill="#A1AEB7"
             ></path>
           </svg>
-        </div>
+        </div> */}
       </div>
       <div>
         <svg
