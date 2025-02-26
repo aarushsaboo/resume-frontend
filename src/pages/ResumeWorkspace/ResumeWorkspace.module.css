@@ -1,44 +1,70 @@
-.resumeWorkspace{
-    background-color: white;
-    min-width: 800px;
-    max-width: 800px;
-    width: 800px;
-    padding: 36px 60px;
-    border-radius: 14px;
+.mainContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  
 }
 
-.resumeContent{
-    margin-bottom: 2.5rem;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+/* Left Sidebar */
+.sidebar {
+  width: 20%;
+  background: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* education */
-.education, .projectExperience, .leadershipExperience, .customSection{
-    margin-bottom: 16px;
-    width: 100%;
+.sidebar h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.unlockButton {
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.unlockButton:hover {
+  background: #45a049;
+}
+
+/* Resume Container */
+.resumeContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* ⬆️ Align content at the top */
+  padding: 20px;
+  overflow-y: auto; /* ✅ Allows vertical scrolling */
+  height: 100vh; /* Ensure it covers the full screen */
 }
 
 
-.leftIcon{
-    padding-right: .2em;
-}
-
-.rightIcon{
-    padding-left: .2rem;
-}
-
-.container {
-  width: 100%;
-  margin-top: 0.125rem;
-  position: relative;
+/* Resume Content */
+.resumeContent {
+  background-color: white;
+  width: 60%;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-height: 100vh; /* ✅ Prevents it from being too tall */
+  overflow-y: auto; /* ✅ Enables scrolling inside if needed */
 }
 
 
-
+/* Export Button */
 .exportButton {
   position: absolute;
   top: 20px;

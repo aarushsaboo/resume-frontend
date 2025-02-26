@@ -1,9 +1,6 @@
-import React, { useRef } from "react"
-import html2pdf from "html2pdf.js"
-
-
-import styles from "./ResumeWorkspace.module.css"
-
+import React, { useRef } from "react";
+import html2pdf from "html2pdf.js";
+import styles from "./ResumeWorkspace.module.css";
 import Personal from "./components/Personal/Personal"
 import Heading from "../../components/Heading/Heading"
 import Organization from "../../components/Organization/Organization"
@@ -12,10 +9,10 @@ import BulletContainer from "../../components/BulletContainer/BulletContainer"
 import CustomSection from "../../components/CustomSection/CustomSection"
 
 const ResumeWorkspace = () => {
-  const resumeRef = useRef(null)
+  const resumeRef = useRef(null);
 
   const exportToPDF = () => {
-    const element = resumeRef.current
+    const element = resumeRef.current;
 
     const opt = {
       margin: [10, 10, 10, 10],
@@ -31,19 +28,34 @@ const ResumeWorkspace = () => {
         format: "letter",
         orientation: "portrait",
       },
-    }
+    };
 
-    html2pdf().set(opt).from(element).save()
-  }
+    html2pdf().set(opt).from(element).save();
+  };
 
   return (
-    <div className={styles.resumeWorkspace}>
-      {/* PDF Export Button */}
-      <button onClick={exportToPDF} className={styles.exportButton}>
-        Export to PDF
-      </button>
+    <div className={styles.mainContainer}>
+      {/* Sidebar Container */}
+      <div className={styles.sidebar}>
+        <h2>Resume Score</h2>
+        <p>Impact: 90</p>
+        <p>Quantify Impact: 10</p>
+        <p>Repetition: 10</p>
+        <p>Weak verbs: 10</p>
+        <p>Responsibilities: 10</p>
+        <p>Spelling & Consistency: 10</p>
+        <p>Brevity: 87</p>
+        <p>Style: 73</p>
+        <button className={styles.unlockButton}>Unlock Full Report</button>
+      </div>
 
-      {/* Resume Content */}
+      {/* Resume Editor */}
+      <div className={styles.resumeContainer}>
+        <button onClick={exportToPDF} className={styles.exportButton}>
+          Export to PDF
+        </button>
+
+        {/* Resume Content */}
       <div
         ref={resumeRef}
         id="resumePdfContent"
@@ -145,8 +157,10 @@ const ResumeWorkspace = () => {
           rightIconStyles={styles.rightIcon}
         />
       </div>
+    
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ResumeWorkspace
+export default ResumeWorkspace;
