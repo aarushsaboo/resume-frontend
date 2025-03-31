@@ -1,0 +1,365 @@
+.Home {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.loginButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.loginForm {
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.loginForm.active {
+  display: block;
+}
+
+.loginForm input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.loginForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.loginForm p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.loginForm a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.heroContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroText {
+  width: 50%;
+}
+
+.hero {
+  background-color: lightblue;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #007bff;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.heroButtons button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.buildResumeButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.uploadResumeButton {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.trustpilotRating {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.trustpilotRating img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* Features section */
+.features {
+  padding: 50px 0;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+}
+
+/* Templates section */
+.templates {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.templates h2 {
+  margin-bottom: 10px;
+}
+
+.templates p {
+  margin-bottom: 20px;
+}
+
+.viewTemplatesButton {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.templateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.template img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.template p {
+  margin-top: 10px;
+}
+
+/* Steps section */
+.steps {
+  padding: 50px 0;
+  background-color: #f7f9fc;
+}
+
+.steps .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stepsContent {
+  width: 50%;
+}
+
+.stepsContent h2 {
+  margin-bottom: 10px;
+}
+
+.stepsContent p {
+  margin-bottom: 20px;
+}
+
+.step {
+  margin-bottom: 30px;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stepNumber {
+  background-color: #e0e0e0;
+  color: #333;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.fillOutSections, .templateStyles, .downloadFormats {
+  margin-top: 15px;
+}
+
+.sectionTags, .styleTags, .formatTags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.sectionTags span, .styleTags span, .formatTags span {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.makeResumeButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.stepsImage {
+  width: 40%;
+}
+
+.stepsImage img {
+  width: 100%;
+}
+
+.needHelpButton {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .headerContainer, .heroContainer, .steps .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroText, .stepsContent, .stepsImage {
+    width: 100%;
+    text-align: center;
+  }
+
+  .featureGrid, .templateGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .loginButton {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 5px 0;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 0.7em;
+    padding: 4px 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
