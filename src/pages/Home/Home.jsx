@@ -1,5 +1,9 @@
 import React, { useState } from "react"
 import styles from "./Home.module.css"
+import Lottie from "lottie-react"
+import ideaAnimation from "../../assets/idea.json"
+import docAnimation from "../../assets/doc.json"
+
 
 const Home = () => {
   const [showSignInForm, setShowSignInForm] = useState(false)
@@ -75,15 +79,23 @@ const Home = () => {
               >
                 Build My Resume Now
               </button>
-              {/* <button className={styles.uploadResumeButton}>
-                Upload My Existing Resume
-              </button> */}
             </div>
             <div className={styles.trustpilotRating}>
               <img src="trustpilot-stars.png" alt="Trustpilot Rating" />
               <span>4.5</span>
             </div>
           </div>
+
+          <div className={styles.heroBlankContainer}>
+  <div className={styles.lottieWrapperTopLeft}>
+    <Lottie animationData={ideaAnimation} loop={true} />
+  </div>
+  <div className={styles.lottieWrapperBottomRight}>
+    <Lottie animationData={docAnimation} loop={true} />
+  </div>
+</div>
+
+
 
           {showSignInForm && (
             <div className={`${styles.loginForm} ${styles.active}`}>
