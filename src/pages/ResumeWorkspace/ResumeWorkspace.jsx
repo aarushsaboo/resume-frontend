@@ -11,6 +11,7 @@ import BulletContainer from "../../components/BulletContainer/BulletContainer"
 import CustomSection from "../../components/CustomSection/CustomSection"
 import Navbar from "../../components/Navbar/Navbar"
 import Sidebar from "./components/Sidebar/Sidebar"
+import SecondSidebar from "./components/SecondSidebar/SecondSidebar"
 import FormattingToolbar from "./components/FormattingToolbar/FormattingToolbar"
 import ResumeScore from "./components/ResumeScore/ResumeScore"
 
@@ -49,6 +50,7 @@ const ResumeWorkspace = () => {
       />
       <div className={styles.resumeWorkspace}>
         <Sidebar />
+        <SecondSidebar />
         <FormattingToolbar />
         <div className={styles.mainContent}>
           <ResumeScore />

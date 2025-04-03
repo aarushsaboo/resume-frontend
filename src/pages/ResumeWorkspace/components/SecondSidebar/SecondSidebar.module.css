@@ -1,0 +1,14 @@
+.secondSidebar{
+    width: 603px;
+height: 110%;
+flex-shrink: 0;
+position: fixed;
+/* right: 100%;
+top: -10%; */
+right: 60%;
+top: 10%;
+z-index: 98;
+background-color: white;
+display: flex;
+flex-direction: row;
+}
