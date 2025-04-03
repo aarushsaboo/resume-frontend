@@ -41,7 +41,7 @@ const ResumeWorkspace = () => {
   }
 
   return (
-    <div className={styles.body}>
+    <>
       <Navbar
         exportToPDF={exportToPDF}
         fileName={fileName}
@@ -157,7 +157,7 @@ const ResumeWorkspace = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

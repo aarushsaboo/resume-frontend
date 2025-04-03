@@ -1,9 +1,9 @@
 
 /* Resume Score */
 .resumeScore {
-    position: absolute;
-    top: -20px;
-    right: -150px;
+    position: fixed;
+    top: 120px;
+    right: 50px;
     background-color: transparent;
     border: none;
     padding: 0;

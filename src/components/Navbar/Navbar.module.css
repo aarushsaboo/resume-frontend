@@ -8,6 +8,7 @@
     height: 56px;
     width: 100%;
     margin-bottom: 20px;
+    position: fixed;
 }
 
 /* back arrow */
