@@ -10,6 +10,7 @@ const Heading = ({ heading, leftIconStyles, rightIconStyles }) => {
     handleInput: handleHeadingInput,
     hiddenText: headingHiddenText,
   } = useInputWidth({ initialValue: heading })
+  // here the heading(initialValue) is literally "Heading" ie a placeholder.
 
   return (
     <div className={styles.heading}>

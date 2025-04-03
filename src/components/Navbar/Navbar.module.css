@@ -16,7 +16,7 @@
     border-radius: 3px 0px 0px 0px;
 border: 1px solid #484E5C;
 background: #373D49;
-/* width: 206px; */
+width: 206px;
 height: 28px;
 flex-shrink: 0;
 margin-top: 13px;
@@ -24,5 +24,5 @@ color: white;
 padding: 5px 0px 5px 8px;
 /* min-width: 206px;
 max-width: 400px; */
-flex-grow: 1;
+/* flex-grow: 1; */
 }

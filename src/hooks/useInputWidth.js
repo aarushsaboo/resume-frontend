@@ -1,6 +1,7 @@
+// this is when there's an initialValue of "Heading" & we return width ( depending on "Heading" in the beginning & later on )
 import { useState, useRef, useEffect } from "react"
 
-export const useInputWidth = ({ initialValue = "" }) => {
+export const useInputWidth = ({ initialValue }) => {
   const [value, setValue] = useState(initialValue)
   const [inputWidth, setInputWidth] = useState("0")
   const hiddenText = useRef(null)
@@ -22,6 +23,7 @@ export const useInputWidth = ({ initialValue = "" }) => {
     }
   }, [initialValue])
 
+  // util
   const getTextWidth = (text) => {
     if (hiddenText.current) {
       hiddenText.current.textContent = text

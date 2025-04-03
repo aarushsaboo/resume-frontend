@@ -13,6 +13,7 @@ const Degree = ({ degree, leftIconStyles, rightIconStyles }) => {
     handleInput: handleDegreeInput,
     hiddenText: degreeHiddenText,
   } = useDynamicWidth({ placeholder: degree })
+  // here the degree (placeholder) is actually "Degree". That's being passed down from the parent.
 
   const {
     startDate,
@@ -58,6 +59,7 @@ const Degree = ({ degree, leftIconStyles, rightIconStyles }) => {
             className={styles.hiddenText}
             aria-hidden="true"
           ></span>
+          {/* this hidden text deals with hiddenText (degreeHiddenText) */}
         </div>
         <div className={rightIconStyles}></div>
       </div>

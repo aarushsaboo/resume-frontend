@@ -1,4 +1,4 @@
-// hooks/useDynamicWidth.js
+// this is when the placeholder is present originally & we initially return the width ( based on placeholder initially, later on based on the input)
 import { useState, useRef, useEffect } from "react"
 
 export const useDynamicWidth = ({ placeholder }) => {
@@ -14,6 +14,7 @@ export const useDynamicWidth = ({ placeholder }) => {
     }
   }, [placeholder])
 
+  // util 
   const getTextWidth = (text) => {
     if (hiddenText.current) {
       hiddenText.current.textContent = text || placeholder
