@@ -7,6 +7,12 @@
 
 }
 /* back arrow */
+.backArrowContainer{
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+}
 .backArrow{
     padding: 13px 20px 13px 21px;
 }
@@ -14,15 +20,33 @@
 /* file name */
 .fileName{
     border-radius: 3px 0px 0px 0px;
-border: 1px solid #484E5C;
+border: 2px solid #484E5C;
 background: #373D49;
 width: 206px;
 height: 28px;
 flex-shrink: 0;
 margin-top: 13px;
-color: white;
 padding: 5px 0px 5px 8px;
 /* min-width: 206px;
 max-width: 400px; */
 /* flex-grow: 1; */
+color: #ADB1B5;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/* export button */
+.exportButton{
+    width: 120px;
+height: 28px;
+flex-shrink: 0;
+border: 1px solid #92AFA5;
+background: #B2DCC4;
+padding: 5px 33px 7px 31px;
+margin-top: 13px;
+position: absolute;
+right: 3%;
 }

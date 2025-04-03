@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import html2pdf from "html2pdf.js"
 
 import styles from "./ResumeWorkspace.module.css"
@@ -13,13 +13,14 @@ import Navbar from "../../components/Navbar/Navbar"
 
 const ResumeWorkspace = () => {
   const resumeRef = useRef(null)
+  const [fileName, setFileName] = useState("Untitled")
 
   const exportToPDF = () => {
     const element = resumeRef.current
 
     const opt = {
       margin: [10, 10, 10, 10],
-      filename: "resume.pdf",
+      filename: fileName,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: {
         scale: 2,
@@ -38,12 +39,8 @@ const ResumeWorkspace = () => {
 
   return (
     <div className={styles.body}>
-      <Navbar />
+      <Navbar exportToPDF={exportToPDF} fileName={fileName} setFileName={setFileName} />
     <div className={styles.resumeWorkspace}>
-      {/* PDF Export Button */}
-      {/* <button onClick={exportToPDF} className={styles.exportButton}>
-        Export to PDF
-      </button> */}
 
       {/* Resume Content */}
       <div
