@@ -1,5 +1,7 @@
 .body{
-  
+  background-color: #676D83;
+  width: 100vw;
+  height: 100vh;
 }
 .resumeWorkspace{
     background-color: white;
@@ -8,7 +10,7 @@
     width: 800px;
     padding: 36px 60px;
     border-radius: 14px;
-    right: 20%;
+    right: 5%;
     position: absolute;
 }
 
