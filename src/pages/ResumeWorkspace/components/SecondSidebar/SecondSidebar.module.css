@@ -76,8 +76,13 @@
   transition: background-color 0.2s;
 }
 
-.generateButton:hover {
+.generateButton:hover:not(:disabled) {
   background-color: #3a7bc8;
+}
+
+.generateButton:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
 }
 
 .bulletPointContainer {
@@ -108,4 +113,33 @@
   font-size: 14px;
   line-height: 1.5;
   color: #444;
+}
+
+/* Empty state styles */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+}
+
+.emptyStateIcon {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.emptyStateTitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.emptyStateText {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 240px;
 }
