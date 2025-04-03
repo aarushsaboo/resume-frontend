@@ -9,6 +9,7 @@ import Organization from "../../components/Organization/Organization"
 import Degree from "../../components/Degree/Degree"
 import BulletContainer from "../../components/BulletContainer/BulletContainer"
 import CustomSection from "../../components/CustomSection/CustomSection"
+import Navbar from "../../components/Navbar/Navbar"
 
 const ResumeWorkspace = () => {
   const resumeRef = useRef(null)
@@ -36,11 +37,13 @@ const ResumeWorkspace = () => {
   }
 
   return (
+    <div className={styles.body}>
+      <Navbar />
     <div className={styles.resumeWorkspace}>
       {/* PDF Export Button */}
-      <button onClick={exportToPDF} className={styles.exportButton}>
+      {/* <button onClick={exportToPDF} className={styles.exportButton}>
         Export to PDF
-      </button>
+      </button> */}
 
       {/* Resume Content */}
       <div
@@ -144,7 +147,8 @@ const ResumeWorkspace = () => {
           rightIconStyles={styles.rightIcon}
         />
       </div>
-    </div>
+      </div>
+      </div>
   )
 }
 

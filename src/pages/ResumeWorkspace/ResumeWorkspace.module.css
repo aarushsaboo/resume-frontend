@@ -1,3 +1,6 @@
+.body{
+  
+}
 .resumeWorkspace{
     background-color: white;
     min-width: 800px;
@@ -5,6 +8,8 @@
     width: 800px;
     padding: 36px 60px;
     border-radius: 14px;
+    right: 20%;
+    position: absolute;
 }
 
 .resumeContent{
@@ -42,7 +47,7 @@
 .exportButton {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: -20%;
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
