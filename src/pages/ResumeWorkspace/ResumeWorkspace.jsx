@@ -10,9 +10,9 @@ import Degree from "../../components/Degree/Degree"
 import BulletContainer from "../../components/BulletContainer/BulletContainer"
 import CustomSection from "../../components/CustomSection/CustomSection"
 import Navbar from "../../components/Navbar/Navbar"
-import Sidebar from "./components/Sidebar"
-import FormattingToolbar from "./components/FormattingToolbar"
-import ResumeScore from "./components/ResumeScore"
+import Sidebar from "./components/Sidebar/Sidebar"
+import FormattingToolbar from "./components/FormattingToolbar/FormattingToolbar"
+import ResumeScore from "./components/ResumeScore/ResumeScore"
 
 const ResumeWorkspace = () => {
   const resumeRef = useRef(null)

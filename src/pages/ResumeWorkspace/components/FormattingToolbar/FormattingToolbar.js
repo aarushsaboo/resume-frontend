@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../ResumeWorkspace.module.css"
+import styles from "./FormattingToolbar.module.css"
 
 const FormattingToolbar = () => {
   return (
