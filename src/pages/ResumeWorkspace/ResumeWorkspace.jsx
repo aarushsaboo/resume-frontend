@@ -18,6 +18,8 @@ import ResumeScore from "./components/ResumeScore/ResumeScore"
 const ResumeWorkspace = () => {
   const resumeRef = useRef(null)
   const [fileName, setFileName] = useState("Untitled")
+  const [showGenerator, setShowGenerator] = useState(true);
+
 
   const exportToPDF = () => {
     const element = resumeRef.current
@@ -50,7 +52,7 @@ const ResumeWorkspace = () => {
       />
       <div className={styles.resumeWorkspace}>
         <Sidebar />
-        <SecondSidebar />
+        {/* <SecondSidebar /> */}
         <FormattingToolbar />
         <div className={styles.mainContent}>
           <ResumeScore />

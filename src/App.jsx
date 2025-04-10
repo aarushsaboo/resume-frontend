@@ -1,15 +1,21 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import ResumeWorkspace from "./pages/ResumeWorkspace/ResumeWorkspace"
-import Home from "./pages/Home/Home"
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import ResumeEditor from './pages/ResumeWorkspace/ResumeWorkspace';
+
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ResumeWorkspace />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/resume-editor" element={<ResumeEditor />} />
+
+
+        {/* Add more routes here if needed */}
       </Routes>
-    </Router>)
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

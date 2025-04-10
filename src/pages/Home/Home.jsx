@@ -1,319 +1,197 @@
-import React, { useState } from "react"
-import styles from "./Home.module.css"
-import Lottie from "lottie-react"
-import ideaAnimation from "../../assets/idea.json"
-import docAnimation from "../../assets/doc.json"
+import styles from './Home.module.css';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faFileCircleCheck,
+  faRobot,
+  faMagnifyingGlassChart,
+  faPenToSquare,
+  faChartLine,
+  faFileExport,
+  faUserTie,
+} from '@fortawesome/free-solid-svg-icons';
 
-
-const Home = () => {
-  const [showSignInForm, setShowSignInForm] = useState(false)
-  const [showSignUpForm, setShowSignUpForm] = useState(false)
-
-  const toggleLoginForm = () => {
-    if (showSignInForm) {
-      setShowSignInForm(false)
-    } else if (showSignUpForm) {
-      setShowSignUpForm(false)
-    } else {
-      setShowSignInForm(true)
-    }
-  }
-
-  const showSignupForm = (e) => {
-    e.preventDefault()
-    setShowSignInForm(false)
-    setShowSignUpForm(true)
-  }
-
-  const showSigninForm = (e) => {
-    e.preventDefault()
-    setShowSignUpForm(false)
-    setShowSignInForm(true)
-  }
-
-  const handleSignUp = (e) => {
-    e.preventDefault()
-    alert("Sign Up clicked!")
-    setShowSignUpForm(false)
-    setShowSignInForm(true)
-  }
-
-  const handleSignIn = (e) => {
-    e.preventDefault()
-    alert("Sign In clicked!")
-  }
+export default function Home() {
+  const navigate = useNavigate();
 
   return (
-    <div className={styles.Home}>
+    <>
       <header className={styles.header}>
-        <div className={`${styles.container} ${styles.headerContainer}`}>
-          <div className={styles.logo}>ResumeGenius</div>
+        <div className={styles.container}>
           <nav className={styles.nav}>
-            <a href="#">Builders</a>
-            <a href="#">Resumes</a>
-            <a href="#">Cover Letters</a>
-            <a href="#">CVs</a>
-            <a href="#">Resources</a>
-            <button className={styles.loginButton} onClick={toggleLoginForm}>
-              Login
+            <div className={styles.logo}>
+              <FontAwesomeIcon icon={faFileCircleCheck} className={styles.logoIcon} />
+              ResumeAI
+            </div>
+            <ul className={styles.navLinks}>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+            <button className={styles.ctaButton} onClick={() => navigate('/resume-editor')}>
+              Start Optimizing
             </button>
           </nav>
         </div>
       </header>
 
-      <section className={styles.hero}>
-        <div className={`${styles.container} ${styles.heroContainer}`}>
-          <div className={styles.heroText}>
-            <h1>
-              Make your professional resume <span>in minutes</span>
-            </h1>
-            <p>
-              From generating bullet points to automatic formatting, our resume
-              builder will help you make a professional resume quickly and
-              effortlessly.
-            </p>
-            <div className={styles.heroButtons}>
-              <button
-                className={styles.buildResumeButton}
-                onClick={() => (window.location.href = "/")}
-              >
-                Build My Resume Now
+      <main>
+        <section className={styles.heroSection}>
+          <div className={styles.container}>
+            <div className={styles.hero}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Get Your Resume <span>ATS-Ready</span> in Minutes</h1>
+                <p className={styles.heroDescription}>
+                  Our AI-powered tool analyzes your resume against ATS systems, provides real-time scoring, and helps you optimize to land more interviews.
+                </p>
+                <button className={styles.ctaButton} onClick={() => navigate('/resume-editor')}>
+                  Upload Your Resume
+                </button>
+              </div>
+              <div className={styles.heroImage}>
+                <img src="/api/placeholder/500/350" alt="Resume ATS Tracker Dashboard Preview" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.features}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>Why Choose ResumeAI?</h2>
+            <div className={styles.featureGrid}>
+              <div className={styles.featureCard}>
+                <div className={styles.featureIcon}><FontAwesomeIcon icon={faRobot} /></div>
+                <h3 className={styles.featureTitle}>ATS Compatibility Score</h3>
+                <p className={styles.featureDescription}>Get instant feedback on how well your resume will perform with Applicant Tracking Systems used by 90% of employers.</p>
+              </div>
+              <div className={styles.featureCard}>
+                <div className={styles.featureIcon}><FontAwesomeIcon icon={faMagnifyingGlassChart} /></div>
+                <h3 className={styles.featureTitle}>Keyword Optimization</h3>
+                <p className={styles.featureDescription}>Our AI identifies missing keywords and phrases that match your target job descriptions and industry standards.</p>
+              </div>
+              <div className={styles.featureCard}>
+                <div className={styles.featureIcon}><FontAwesomeIcon icon={faPenToSquare} /></div>
+                <h3 className={styles.featureTitle}>Real-time Editing</h3>
+                <p className={styles.featureDescription}>Make changes to your resume and see your ATS score improve instantly with our interactive editor.</p>
+              </div>
+              <div className={styles.featureCard}>
+                <div className={styles.featureIcon}><FontAwesomeIcon icon={faChartLine} /></div>
+                <h3 className={styles.featureTitle}>Detailed Analytics</h3>
+                <p className={styles.featureDescription}>Get section-by-section analysis and actionable recommendations to improve your resume's effectiveness.</p>
+              </div>
+              <div className={styles.featureCard}>
+                <div className={styles.featureIcon}><FontAwesomeIcon icon={faFileExport} /></div>
+                <h3 className={styles.featureTitle}>Multiple Export Options</h3>
+                <p className={styles.featureDescription}>Download your optimized resume in PDF, DOCX, or plain text formats ready for submission.</p>
+              </div>
+              <div className={styles.featureCard}>
+                <div className={styles.featureIcon}><FontAwesomeIcon icon={faUserTie} /></div>
+                <h3 className={styles.featureTitle}>Industry Templates</h3>
+                <p className={styles.featureDescription}>Access professional templates tailored to your specific industry and career level.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.testimonials}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>What Our Users Say</h2>
+            <div className={styles.testimonialGrid}>
+              {[{
+                initials: 'JD', name: 'James Donovan', title: 'Software Engineer',
+                quote: 'After optimizing my resume with ResumeAI, I started getting callbacks within days. The ATS score feature helped me understand exactly what was missing from my resume.'
+              }, {
+                initials: 'SL', name: 'Sarah Lin', title: 'Marketing Director',
+                quote: 'I was applying for months with no success. After using ResumeAI to optimize my resume, I got 3 interviews in the first week! The keyword suggestions were game-changing.'
+              }, {
+                initials: 'MR', name: 'Michael Rodriguez', title: 'Career Coach',
+                quote: 'As a career coach, I recommend ResumeAI to all my clients. The real-time feedback helps job seekers understand what recruiters and ATS systems are looking for.'
+              }, {
+                initials: 'AP', name: 'Aisha Patel', title: 'Project Manager',
+                quote: 'The section-by-section analysis pointed out weaknesses in my experience descriptions I never would have caught. My ATS score jumped from 64% to 92%!'
+              }].map((t, i) => (
+                <div key={i} className={styles.testimonialCard}>
+                  <p className={styles.testimonialText}>&quot;{t.quote}&quot;</p>
+                  <div className={styles.testimonialAuthor}>
+                    <div className={styles.testimonialAvatar}>{t.initials}</div>
+                    <div className={styles.testimonialInfo}>
+                      <h4>{t.name}</h4>
+                      <p className={styles.testimonialPosition}>{t.title}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.ctaSection}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>How It Works</h2>
+            <p className={styles.ctaDescription}>Three simple steps to optimize your resume and increase your interview chances</p>
+
+            <div className={styles.demoWrapper}>
+              <div className={styles.stepContainer}>
+                <div className={styles.step}>
+                  <div className={styles.stepNumber}>1</div>
+                  <h3 className={styles.stepTitle}>Upload Your Resume</h3>
+                  <p className={styles.stepDescription}>Upload your existing resume in PDF, DOCX, or paste your text directly.</p>
+                </div>
+                <div className={styles.step}>
+                  <div className={styles.stepNumber}>2</div>
+                  <h3 className={styles.stepTitle}>Get ATS Analysis</h3>
+                  <p className={styles.stepDescription}>Our AI analyzes your resume against ATS criteria and industry standards.</p>
+                </div>
+                <div className={styles.step}>
+                  <div className={styles.stepNumber}>3</div>
+                  <h3 className={styles.stepTitle}>Optimize & Download</h3>
+                  <p className={styles.stepDescription}>Make the suggested improvements and download your ATS-optimized resume.</p>
+                </div>
+              </div>
+              <button className={styles.ctaButton} onClick={() => navigate('/resume-editor')}>
+                Try It Now
               </button>
             </div>
-            <div className={styles.trustpilotRating}>
-              <img src="trustpilot-stars.png" alt="Trustpilot Rating" />
-              <span>4.5</span>
-            </div>
           </div>
+        </section>
+      </main>
 
-          <div className={styles.heroBlankContainer}>
-  <div className={styles.lottieWrapperTopLeft}>
-    <Lottie animationData={ideaAnimation} loop={true} />
-  </div>
-  <div className={styles.lottieWrapperBottomRight}>
-    <Lottie animationData={docAnimation} loop={true} />
-  </div>
-</div>
-
-
-
-          {showSignInForm && (
-            <div className={`${styles.loginForm} ${styles.active}`}>
-              <div className={styles.authContainer}>
-                <h2>Sign In</h2>
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <button onClick={handleSignIn}>Sign In</button>
-                <p>
-                  Don't have an account?{" "}
-                  <a href="#" onClick={showSignupForm}>
-                    Create one
-                  </a>
-                </p>
-              </div>
-            </div>
-          )}
-
-          {showSignUpForm && (
-            <div className={`${styles.loginForm} ${styles.active}`}>
-              <div className={styles.authContainer}>
-                <h2>Sign Up</h2>
-                <input type="text" placeholder="First Name" />
-                <input type="text" placeholder="Last Name" />
-                <input type="text" placeholder="Username" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button onClick={handleSignUp}>Sign Up</button>
-                <p>
-                  Already have an account?{" "}
-                  <a href="#" onClick={showSigninForm}>
-                    Sign In
-                  </a>
-                </p>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-
-      <section className={styles.features}>
+      <footer className={styles.footer}>
         <div className={styles.container}>
-          <h2>Key Features</h2>
-          <div className={styles.featureGrid}>
+          <div className={styles.footerContent}>
+            <div className={styles.footerInfo}>
+              <div className={styles.footerLogo}>
+                <FontAwesomeIcon icon={faFileCircleCheck} /> ResumeAI
+              </div>
+              <p className={styles.footerDescription}>Helping job seekers beat the ATS and land more interviews with AI-powered resume optimization.</p>
+            </div>
             {[
               {
-                icon: "feature-icon-1.png",
-                title: "Leverage the latest tech",
-                desc: "Our resume builder lets you make a fully customized resume in minutes. Use our software to your advantage & apply for jobs faster.",
-              },
-              {
-                icon: "feature-icon-2.png",
-                title: "Generate bullet points",
-                desc: "Your resume's experience section is what employers care about most. Autogenerate experience bullet points that prove your on-the-job skills.",
-              },
-              {
-                icon: "feature-icon-3.png",
-                title: "Auto-format each section",
-                desc: "Formatting can be time-consuming. Don't let margins & spacing slow you down - put in your details and the resume maker does the rest.",
-              },
-              {
-                icon: "feature-icon-4.png",
-                title: "Instantly download your resume",
-                desc: "Easily download your resume as a PDF, for Word, or in text format. Use the dashboard to test different templates to see what works best for you.",
-              },
-              {
-                icon: "feature-icon-5.png",
-                title: "Get expert feedback",
-                desc: "The job market is extremely competitive. Get an edge on other applicants with professional feedback after you've made your resume.",
-              },
-              {
-                icon: "feature-icon-6.png",
-                title: "Launch your job hunt",
-                desc: "Equipped with your perfected resume, you're ready to take on the job market. Get more job interviews & earn better job offers.",
-              },
-            ].map((feature, index) => (
-              <div className={styles.feature} key={index}>
-                <img src={feature.icon} alt={feature.title} />
-                <h3>{feature.title}</h3>
-                <p>{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.templates}>
-        <div className={styles.container}>
-          <h2>Choose your favorite resume template</h2>
-          <p>
-            Regardless of your background, there's a template in the Genius
-            resume maker that's perfect for highlighting your experience & skill
-            set.
-          </p>
-          <button
-            className={styles.viewTemplatesButton}
-            onClick={() => alert("View More Resume Templates button clicked!")}
-          >
-            View More Resume Templates
-          </button>
-          <div className={styles.templateGrid}>
-            {[
-              { img: "template-1.png", name: "Minimalist" },
-              { img: "template-2.png", name: "Elegant" },
-              { img: "template-3.png", name: "Chicago" },
-              { img: "template-4.png", name: "Clean" },
-              { img: "template-5.png", name: "Tai Manual" },
-              { img: "template-6.png", name: "2025" },
-              { img: "template-7.png", name: "Corporate" },
-            ].map((template, index) => (
-              <div className={styles.template} key={index}>
-                <img src={template.img} alt={`${template.name} Template`} />
-                <p>{template.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.steps}>
-        <div className={styles.container}>
-          <div className={styles.stepsContent}>
-            <h2>Use our resume builder in 3 easy steps</h2>
-            <p>
-              Putting together a complete job application has never been easier.
-              Make a resume with our professional resume builder, and then
-              quickly generate a matching cover letter. In minutes you'll be
-              ready to apply for your next job.
-            </p>
-
-            <div className={styles.step}>
-              <div className={styles.stepHeader}>
-                <div className={styles.stepNumber}>1</div>
-                <h3>Generate your resume's content instantly</h3>
-              </div>
-              <p>
-                In a few clicks, create a resume summary and work-experience
-                bullet points to showcase your qualifications and skills.
-              </p>
-              <div className={styles.fillOutSections}>
-                <p>Fill out these sections:</p>
-                <div className={styles.sectionTags}>
-                  {[
-                    "Contact Information",
-                    "Experience",
-                    "Education",
-                    "Certifications",
-                    "Skills",
-                    "Summary",
-                  ].map((section, index) => (
-                    <span key={index}>{section}</span>
+                title: 'Product',
+                links: ['Features', 'Pricing', 'Testimonials', 'FAQ']
+              }, {
+                title: 'Company',
+                links: ['About Us', 'Blog', 'Careers', 'Contact']
+              }, {
+                title: 'Resources',
+                links: ['Resume Tips', 'Career Advice', 'Interview Prep', 'Job Search Guide']
+              }
+            ].map((section, i) => (
+              <div key={i} className={styles.footerLinks}>
+                <h3>{section.title}</h3>
+                <ul>
+                  {section.links.map((link, j) => (
+                    <li key={j}><a href="#">{link}</a></li>
                   ))}
-                </div>
+                </ul>
               </div>
-            </div>
-
-            <div className={styles.step}>
-              <div className={styles.stepHeader}>
-                <div className={styles.stepNumber}>2</div>
-                <h3>Select a resume template</h3>
-              </div>
-              <p>
-                See how your resume looks using different templates. Choose the
-                template that fits the job you want and best suits your
-                personality.
-              </p>
-              <div className={styles.templateStyles}>
-                <p>Template Styles:</p>
-                <div className={styles.styleTags}>
-                  {["Professional", "Modern", "Creative", "Simple", "etc."].map(
-                    (style, index) => (
-                      <span key={index}>{style}</span>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.step}>
-              <div className={styles.stepHeader}>
-                <div className={styles.stepNumber}>3</div>
-                <h3>Download your resume</h3>
-              </div>
-              <p>
-                Save your newly built resume as a PDF, Word Doc, or TXT file
-                directly to your browser. You're now ready to start applying for
-                jobs!
-              </p>
-              <div className={styles.downloadFormats}>
-                <p>Formats:</p>
-                <div className={styles.formatTags}>
-                  {["Word formats", "Google Docs", "PDF format"].map(
-                    (format, index) => (
-                      <span key={index}>{format}</span>
-                    )
-                  )}
-                </div>
-              </div>
-              <button className={styles.makeResumeButton}>
-                Make a Resume Now
-              </button>
-            </div>
+            ))}
           </div>
-
-          <div className={styles.stepsImage}>
-            <img src="resume-builder-image.png" alt="Resume Builder Preview" />
+          <div className={styles.copyright}>
+            &copy; 2025 ResumeAI. All rights reserved.
           </div>
         </div>
-      </section>
-
-      <div
-        className={styles.needHelpButton}
-        onClick={() => alert("Need Help? button clicked!")}
-      >
-        Need Help?
-      </div>
-    </div>
-  )
+      </footer>
+    </>
+  );
 }
-
-export default Home
