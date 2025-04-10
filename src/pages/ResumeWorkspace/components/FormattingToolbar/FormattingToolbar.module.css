@@ -1,196 +1,80 @@
-/* Formatting Bar Styles */
-.formattingBar {
-    background-color: #e0e0e0;
-    padding: 5px 10px;
+.formattingToolbar {
     display: flex;
     align-items: center;
-    gap: 2px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 12px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
-    position: fixed;
-    top: 56px; /* Position below navbar */
-    left: 60px; /* Position to the right of sidebar */
-    width: calc(100% - 60px);
-    z-index: 10;
-}
-
-.formattingBar button, 
-.formattingBar select {
-    padding: 5px 10px;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    background-color: white;
-    text-align: center;
-}
-
-.formattingBar button:hover, 
-.formattingBar select:hover {
-    background-color: #e8e8e8;
-}
-
-.textColorButton {
-    text-decoration: underline;
-}
-
-/* Zoom Controls */
-.zoomControls {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .group {
     display: flex;
     align-items: center;
-    gap: 5px;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    padding: 5px;
-    margin-right: 5px;
-}
-
-.zoomControls button, 
-.zoomValue {
-    padding: 5px 10px;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    background-color: white;
-    min-width: 30px;
-    text-align: center;
-}
-
-/* Page Number Controls */
-.pageNumberControls {
+  }
+  
+  .group button {
     display: flex;
     align-items: center;
-    gap: 5px;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    padding: 5px;
-    margin-right: 5px;
-}
-
-.pageNumberControls button, 
-.pageNumber {
-    padding: 5px 10px;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    background-color: white;
-    min-width: 30px;
-    text-align: center;
-}
-
-/* Text Size Button */
-.textSizeButton {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-    border: none;
+    background: transparent;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    padding: 6px 10px;
+    margin: 0 2px;
     cursor: pointer;
-    background-color: #e0e0e0;
-    text-align: center;
-    min-width: auto;
-}
-
-.textSizeButton button, 
-.textSizeButton span {
-    padding: 5px 8px;
-    font-size: 1em;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: white;
-    min-width: 30px;
-}
-
-.textSizeButton span {
-    font-weight: 600;
-}
-
-/* Line Spacing Button */
-.lineSpacingButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #e0e0e0;
-    text-align: center;
-    min-width: auto;
-}
-
-.lineSpacingButton button, 
-.lineSpacingButton span {
-    padding: 5px 8px;
-    font-size: 1em;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: white;
-    min-width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.lineSpacingButton span {
-    font-size: 0.8em;
-    vertical-align: middle;
-}
-
-/* Margin Button */
-.marginButton {
-    padding: 5px 8px;
-    font-size: 1em;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: white;
-    min-width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Bullet Button */
-.bulletButton {
-    padding: 1px;
-    font-size: 1em;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: white;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .group button:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .group button:active {
+    background-color: #d9d9d9;
+  }
+  
+  /* For disabled buttons */
+  .group button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 24px;
+    background-color: #ddd;
+    margin: 0 8px;
+  }
+  
+  .pageInfo, .zoomValue {
+    font-size: 14px;
+    margin: 0 8px;
     min-width: 40px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-}
-
-.bullet {
-    font-size: 0.25em;
-    margin: 0;
-    margin-right: 1px;
-    line-height: 1;
-}
-
-.line {
-    font-size: 0.5em;
-    width: 7px;
     text-align: center;
-    margin: 0;
-    line-height: 1;
-}
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .formattingToolbar {
+      padding: 6px;
+    }
+    
+    .group button {
+      padding: 4px 6px;
+      font-size: 12px;
+    }
+    
+    .divider {
+      margin: 0 4px;
+    }
+    
+    .pageInfo, .zoomValue {
+      margin: 0 4px;
+      min-width: 30px;
+    }
+  }

@@ -7,7 +7,7 @@ const Navbar = ({ exportToPDF, fileName, setFileName }) => {
      const navigate = useNavigate() 
   return (
     <div className={styles.navbar}>
-      <button className={styles.backArrowContainer} onClick={() => navigate('/home')}>
+      <button className={styles.backArrowContainer} onClick={() => navigate('/')}>
         <img src={backarrow} className={styles.backArrow}></img>
       </button>
       <input
