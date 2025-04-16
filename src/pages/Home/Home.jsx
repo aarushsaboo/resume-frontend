@@ -21,11 +21,11 @@ export default function Home() {
           <nav className={styles.nav}>
             <div className={styles.logo}>
               <FontAwesomeIcon icon={faFileCircleCheck} className={styles.logoIcon} />
-              ResumeAI
+              Resume editor
             </div>
             <ul className={styles.navLinks}>
               <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
+              
               <li><a href="#">About</a></li>
             </ul>
             <button className={styles.ctaButton} onClick={() => navigate('/resume-editor')}>
@@ -57,7 +57,7 @@ export default function Home() {
 
         <section className={styles.features}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Why Choose ResumeAI?</h2>
+            <h2 className={styles.sectionTitle}>Why Choose Resume editor?</h2>
             <div className={styles.featureGrid}>
               <div className={styles.featureCard}>
                 <div className={styles.featureIcon}><FontAwesomeIcon icon={faRobot} /></div>
@@ -81,7 +81,7 @@ export default function Home() {
               </div>
               <div className={styles.featureCard}>
                 <div className={styles.featureIcon}><FontAwesomeIcon icon={faFileExport} /></div>
-                <h3 className={styles.featureTitle}>Multiple Export Options</h3>
+                <h3 className={styles.featureTitle}>Export to pdf</h3>
                 <p className={styles.featureDescription}>Download your optimized resume in PDF, DOCX, or plain text formats ready for submission.</p>
               </div>
               <div className={styles.featureCard}>
@@ -93,19 +93,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.testimonials}>
+        {/* <section className={styles.testimonials}>
           <div className={styles.container}>
             <h2 className={styles.sectionTitle}>What Our Users Say</h2>
             <div className={styles.testimonialGrid}>
               {[{
                 initials: 'JD', name: 'James Donovan', title: 'Software Engineer',
-                quote: 'After optimizing my resume with ResumeAI, I started getting callbacks within days. The ATS score feature helped me understand exactly what was missing from my resume.'
+                quote: 'After optimizing my resume with Resume editor, I started getting callbacks within days. The ATS score feature helped me understand exactly what was missing from my resume.'
               }, {
                 initials: 'SL', name: 'Sarah Lin', title: 'Marketing Director',
-                quote: 'I was applying for months with no success. After using ResumeAI to optimize my resume, I got 3 interviews in the first week! The keyword suggestions were game-changing.'
+                quote: 'I was applying for months with no success. After using Resume editor to optimize my resume, I got 3 interviews in the first week! The keyword suggestions were game-changing.'
               }, {
                 initials: 'MR', name: 'Michael Rodriguez', title: 'Career Coach',
-                quote: 'As a career coach, I recommend ResumeAI to all my clients. The real-time feedback helps job seekers understand what recruiters and ATS systems are looking for.'
+                quote: 'As a career coach, I recommend Resume editor to all my clients. The real-time feedback helps job seekers understand what recruiters and ATS systems are looking for.'
               }, {
                 initials: 'AP', name: 'Aisha Patel', title: 'Project Manager',
                 quote: 'The section-by-section analysis pointed out weaknesses in my experience descriptions I never would have caught. My ATS score jumped from 64% to 92%!'
@@ -123,7 +123,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className={styles.ctaSection}>
           <div className={styles.container}>
@@ -161,7 +161,7 @@ export default function Home() {
           <div className={styles.footerContent}>
             <div className={styles.footerInfo}>
               <div className={styles.footerLogo}>
-                <FontAwesomeIcon icon={faFileCircleCheck} /> ResumeAI
+                <FontAwesomeIcon icon={faFileCircleCheck} /> Resume editor
               </div>
               <p className={styles.footerDescription}>Helping job seekers beat the ATS and land more interviews with AI-powered resume optimization.</p>
             </div>
@@ -188,7 +188,7 @@ export default function Home() {
             ))}
           </div>
           <div className={styles.copyright}>
-            &copy; 2025 ResumeAI. All rights reserved.
+            &copy; 2025 Resume editor. All rights reserved.
           </div>
         </div>
       </footer>

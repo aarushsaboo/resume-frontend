@@ -5,7 +5,7 @@ const ResumeScore = () => {
   return (
     <div className={styles.resumeScore}>
       Resume Score
-      <div className={styles.score}>14</div>
+      <div className={styles.score}>75</div>
     </div>
   )
 }

@@ -7,7 +7,7 @@ const Personal = ({ leftIconStyles, rightIconStyles }) => {
     inputWidth: nameWidth,
     handleInput: handleNameInput,
     hiddenText: nameHiddenText,
-  } = useInputWidth({ initialValue: "Heramb pp" })
+  } = useInputWidth({ initialValue: "NAME" })
 
   const {
     value: detailsText,
@@ -15,7 +15,7 @@ const Personal = ({ leftIconStyles, rightIconStyles }) => {
     handleInput: handleDetailsInput,
     hiddenText: detailsHiddenText,
   } = useInputWidth({
-    initialValue: "India | Phone # | heramb.ap@somaiya.edu | LinkedIn Link",
+    initialValue: "India | Phone # | abc@gmail.com | LinkedIn Link",
   })
 
   return (
